@@ -14,7 +14,7 @@ body {
 }
 header {
     background-color: #000032; /* bgc#002171 */
-    background-image: url(images/sunset.jpg); /* bg9 */
+    background-image: url(sunset.jpg); /* bg9 */
     background-position: right; /* bgdp */
     background-repeat: no-repeat; /* bgr */
     background-size: contain; /* bgz */
@@ -105,25 +105,25 @@ footer {
     font-size: 90%; /* fz90% */
 }
 #homehero {
-    background-image: url(images/coast2.jpg); /* bgi */
+    background-image: url(coast2.jpg); /* bgi */
     background-repeat: no-repeat; /* bgr */
     background-size: 100% 100%; /* bgz100%100% */
     height: 300px; /* h300 */
 }
 #yurthero {
-    background-image: url(images/yurt.jpg); /* bgi */
+    background-image: url(yurt.jpg); /* bgi */
     background-repeat: no-repeat; /* bgr */
     background-size: 100% 100%; /* bgz100%100% */
     height: 300px; /* h300 */
 }
 #trailhero {
-    background-image: url(images/trail.jpg); /* bgi */
+    background-image: url(trail.jpg); /* bgi */
     background-repeat: no-repeat; /* bgr */
     background-size: 100% 100%; /* bgz100%100% */
     height: 300px; /* h300 */
 }
 #reshero {
-    background-image: url(images/ocean.jpg); /* bgi */
+    background-image: url(ocean.jpg); /* bgi */
     background-repeat: no-repeat; /* bgr */
     background-size: 100% 100%; /* bgz100%100% */
     height: 300px; /* h300 */
@@ -132,7 +132,7 @@ footer {
 
 /* Configure shophero */
 #shophero {
-    background-image: url('images/psunset.jpg');
+    background-image: url('psunset.jpg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
     height: 300px;
