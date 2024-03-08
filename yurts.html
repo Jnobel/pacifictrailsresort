@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Luxury yurt accommodations and outdoor Hiking Kayaking and Bird Watching
+ activities in a serene natural setting at Pacific Trails Resort.">
+
+
+    <title>Pacific Trails Resort :: Yurts</title>
+    <link rel="stylesheet" href="pacific.css">
+    <link rel="icon" href="images/favicon.ico" type = "image/x-icon">
+     <style>
+    /* Add CSS styles for the receipt-like output */
+    #receipt {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 20px;
+      background-color: #f9f9f9;
+    }
+    </style>
+  </head>
+  <body>
+  <div id="wrapper"> <!-- #wrapper -->
+    <header>
+      <h1><a href="index.html">Pacific Trails Resort</a></h1>
+    </header>
+    <!-- nav>ul*4>a -->
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="yurts.html">Yurts</a></li>
+        <li><a href="activities.html">Activities</a></li>
+        <li><a href="reservations.html">Reservations</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        </ul>
+    </nav>
+    <div id="yurthero" class = "hero"></div> <!-- #yurthero -->
+    <!-- main>h2{}+p{} -->
+    <main>
+      <h2>The Yurts at Pacific Trails</h2>
+        <div class="flow"> <!--.flow-->
+          <section>
+            <h3>What is a yurt?</h3>
+              <p>
+                  Our luxury yurts are permanent structures four feet off the ground.
+                  Each yurt has canvas walls, a wooden floor, a roof dome that can be opened, and a private deck.
+              </p>
+          </section>
+          <section>
+            <h3>How are the yurts finished?</h3>
+              <p>
+                  Each yurt is furnished with a gas fireplace, king-size bed with down quilt, comfy couch, dining table and chairs, mini-fridge, microwave, and coffee maker. Your luxury camping experience includes a sink with hot and cold running water. Shower and restroom facilities are located in the lodge.
+              </p>
+          </section>
+          <section>
+            <h3>What should I bring?</h3>
+              <p>
+                  Most guests pack comfortable walking shoes and plan to dress for
+                  changing weather with light layers of clothing. It's also helpful to
+                  bring a flashlight and a sense of adventure!
+              </p>
+          </section>
+      </div>
+
+
+  <h3>Yurt Packages</h3>
+  <p>A variety of luxury yurt packages are available.  Choose a package below and contact us to begin your reservation.  We're happy to build a custom package just for you! (Click any package for total with sales tax)</p>
+   
+  <table>
+    <tr>
+      <td>Package Name</td>
+      <td>Description</td>
+      <td>Nights</td>
+      <td>Cost per Person</td>
+    </tr>
+    <tr>
+      <td>Weekend Escape</td>
+      <td>Two breakfasts, a trail map, and a picnic snack</td>
+      <td>2</td>
+      <td>$450</td>
+    </tr>
+    <tr>
+      <td>Zen Retreat</td>
+      <td>Four breakfasts, a trail map, a pass for the daily Yoga</td>
+      <td>4</td>
+      <td>$600</td>
+    </tr>
+    <tr>
+      <td>Kayak Away</td>
+      <td>Two breakfasts, two hours of kayak rental daily, and a trail map</td>
+      <td>2</td>
+      <td>$500</td>
+    </tr>
+  </table>
+  <!-- Sales tax calculator -->
+    <div id="receipt"></div>
+    <!-- JavaScript for the sales tax calculator -->
+    <script>
+      // Sales tax calculator
+      function calculateSalesTax(packageName, packagePrice) {
+        // Assuming sales tax rate of 7%
+        const salesTaxRate = 0.07;
+        const salesTax = packagePrice * salesTaxRate;
+        const totalPrice = packagePrice + salesTax;
+
+        // Display the result in the receipt-like format
+        const receipt = document.getElementById('receipt');
+        receipt.innerHTML = `
+          <h3>Receipt</h3>
+          <p>Package Name: ${packageName}</p>
+          <p>Package Price: $${packagePrice.toFixed(2)}</p>
+          <p>Sales Tax (7%): $${salesTax.toFixed(2)}</p>
+          <hr>
+          <p>Total Price: $${totalPrice.toFixed(2)}</p>
+        `;
+      }
+
+      // Get the table rows
+      const tableRows = document.querySelectorAll('table tr');
+      // Loop through each row
+      tableRows.forEach(row => {
+        // Attach click event listener to each row
+        row.addEventListener('click', () => {
+          // Get package name and price from the clicked row
+          const packageName = row.cells[0].textContent;
+          const packagePrice = parseFloat(row.cells[3].textContent.slice(1));
+          // Call the sales tax calculator function
+          calculateSalesTax(packageName, packagePrice);
+        });
+      });
+    </script>
+  </main>
+  <footer>
+      <p>
+        Copyright &copy; 2024 Pacific Trails Resort |
+        <a href="https://ivytech-csm.symplicity.com/profiles/joshua.nobel"> Joshua@Nobel.com</a> 
+      </p>
+  </footer>
+</div> <!-- This closes my wrapper div -->
+</body>
+</html>
